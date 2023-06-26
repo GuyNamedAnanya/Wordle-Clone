@@ -9,6 +9,9 @@ public class BoardManager : MonoBehaviour
     [SerializeField] List<Button> keyboardButtons = new List<Button>();
 
     string keyboardChararcter = "QWERTYUIOPASDFGHJKLZXCVBNM";
+
+    public WordManager wordManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +39,7 @@ public class BoardManager : MonoBehaviour
     }
 
     void ClickButton(string letter)
-    {
-        Debug.Log(letter);
-        
+    {        
+        wordManager.LetterInBox(letter);
     }
 }
